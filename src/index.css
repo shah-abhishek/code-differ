@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+/* (optional) your v4 theme tokens */
+@theme {
+  --color-brand: #CC2131; /* your brand color if you want */
+}
