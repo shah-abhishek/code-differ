@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { DiffEditor, useMonaco } from "@monaco-editor/react";
 import DiffMatchPatch from "diff-match-patch";
 import type * as Monaco from "monaco-editor";
@@ -204,9 +204,17 @@ export default function DiffTool() {
       {/* Toolbar */}
       <div className="sticky top-0 z-10 border-b border-zinc-800/80 bg-zinc-950/90 backdrop-blur px-4 py-3">
         <div className="flex items-center gap-3 flex-wrap">
-          <div className="text-lg font-semibold">Code Compare</div>
+          <div className="flex items-center gap-2 flex-shrink-0">
+            <img 
+              src="/assets/logo/title-logo.png" 
+              alt="Code Differ Logo" 
+              className="w-8 h-8 sm:w-6 sm:h-6"
+            />
+            <div className="text-lg font-semibold hidden sm:block">Code Differ</div>
+            <div className="text-base font-semibold sm:hidden">Code Differ</div>
+          </div>
 
-          <div className="h-6 w-px bg-zinc-700/60" />
+          <div className="h-6 w-px bg-zinc-700/60 hidden sm:block" />
 
           <label className="text-sm text-zinc-300">Language</label>
           <select
